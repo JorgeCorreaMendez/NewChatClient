@@ -17,7 +17,7 @@ public class Main {
 
             List<Message> messageList = (List<Message>) objInputStream.readObject();
 
-            if(!messageList.isEmpty()){
+            if (!messageList.isEmpty()) {
                 System.out.println("------------------------------------------");
                 System.out.println("Previous messages:");
 
@@ -31,10 +31,10 @@ public class Main {
             System.out.println("------------------------------------------");
 
             String newMessage = "";
-            while(!newMessage.equals("bye")) {
+            while (!newMessage.equals("bye")) {
                 List<Message> recentMessages = (List<Message>) objInputStream.readObject();
 
-                if (!recentMessages.isEmpty()){
+                if (!recentMessages.isEmpty()) {
                     System.out.println("The following messages have arrived: ");
                     messageList.addAll(recentMessages);
 
@@ -50,7 +50,7 @@ public class Main {
 
                 Object returnMessage = objInputStream.readObject();
 
-                if(returnMessage instanceof Message){
+                if (returnMessage instanceof Message) {
                     System.out.println(returnMessage);
                     messageList.add((Message) returnMessage);
 

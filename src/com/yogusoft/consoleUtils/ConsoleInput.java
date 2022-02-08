@@ -16,14 +16,14 @@ public class ConsoleInput {
                 x = leer.nextLine();
 
                 if (x.equals("")) {
-                    System.out.println("Error, has introducido una cadena vacia");
-                    System.out.println("Vuelva a intentarlo: ");
+                    System.out.println("Error, you have entered an empty string");
+                    System.out.println("Please try again: ");
                 } else {
                     err = false;
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Error, no has introducido una cadena " + e);
-                System.out.println("Vuelva a intentarlo: ");
+                System.out.println("Error, you haven't entered a string " + e);
+                System.out.println("Please try again: ");
                 leer.nextLine();
             }
         } while (err);
